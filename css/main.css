@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Libre+Franklin:wght@300;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --soft-red: hsl(0, 36%, 70%);
+  --red: hsl(0, 93%, 68%);
+  --brown: hsl(0, 6%, 24%);
+  --gradient-white: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --gradient-red: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*, h1 {
+  margin: 0;
+}
+
+body {
+  color: var(--soft-red);
+}
+body .comming-soon {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-template-rows: 5rem 20rem 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "head" "img" "cont";
+}
+body .comming-soon .header {
+  padding: 1.5rem;
+  background-color: var(--gradient-white);
+  grid-area: head;
+}
+body .comming-soon .hero-img {
+  grid-area: img;
+  overflow: hidden;
+}
+body .comming-soon .hero-img img {
+  width: 100%;
+}
+body .comming-soon .hero-content {
+  grid-area: cont;
+  background-color: var(--gradient-white);
+  max-width: 24rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+body .comming-soon .hero-content .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+body .comming-soon .hero-content .title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 1.5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+body .comming-soon .hero-content .title span {
+  font-weight: 300;
+  color: var(--soft-red);
+}
+body .comming-soon .hero-content .artical {
+  margin: 1rem;
+  line-height: 1.5rem;
+}
+body .comming-soon .hero-content .form {
+  position: relative;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+body .comming-soon .hero-content .form .email-input {
+  width: 80%;
+  padding: 0.8rem;
+  border: 1px solid var(--brown);
+  border-radius: 2rem;
+  font-family: inherit;
+}
+body .comming-soon .hero-content .form .email-input:focus {
+  outline: none;
+  border: 1px solid var(--soft-red);
+}
+body .comming-soon .hero-content .form .error-msg {
+  display: none;
+  margin-top: 0.7rem;
+}
+body .comming-soon .hero-content .form .btn {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+  width: 4.5rem;
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: -0.1rem;
+  right: 0.8rem;
+  transition: all 0.3s;
+}
+body .comming-soon .hero-content .form .btn:hover {
+  width: 4rem;
+}
+body .comming-soon .hero-content .form i {
+  display: none;
+}
+body .comming-soon .hero-content .active .email-input {
+  border: 1px solid var(--red);
+}
+body .comming-soon .hero-content .active .error-msg {
+  color: var(--red);
+}
+body .comming-soon .hero-content .active i {
+  color: var(--red);
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0.7rem;
+  right: 5.5rem;
+}
+body .comming-soon .hero-content .active .error-msg {
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  body .comming-soon {
+    height: 100vh;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 5rem auto;
+    grid-template-areas: "head img" "cont img";
+  }
+  body .comming-soon .header img {
+    margin-left: 7%;
+  }
+  body .comming-soon .hero-img {
+    overflow: hidden;
+  }
+  body .comming-soon .hero-img img {
+    width: auto;
+  }
+  body .comming-soon .hero-content {
+    text-align: start;
+    margin-top: 2rem;
+  }
+  body .comming-soon .hero-content .bg {
+    position: absolute;
+    top: -7rem;
+    left: -6rem;
+    right: -60rem;
+    bottom: 0;
+    width: 150%;
+    z-index: -1;
+  }
+  body .comming-soon .hero-content .title {
+    font-size: 4rem;
+    letter-spacing: 1.3rem;
+  }
+}/*# sourceMappingURL=main.css.map */
