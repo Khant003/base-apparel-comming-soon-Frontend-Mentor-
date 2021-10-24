@@ -153,10 +153,9 @@ body .comming-soon .hero-content .active .error-msg {
   body .comming-soon .hero-content .bg {
     position: absolute;
     top: -7rem;
-    left: -6rem;
-    right: -60rem;
+    left: -10rem;
     bottom: 0;
-    width: 150%;
+    width: 190%;
     z-index: -1;
   }
   body .comming-soon .hero-content .title {
